@@ -1,0 +1,55 @@
+<header class="app-header navbar">
+  <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+    <span class="navbar-toggler-icon" (click)="toggleAside()"></span>
+  </button>
+  <span style="font-weight: bold">
+    <a href="#"
+      style="text-decoration: none;color: black;font-family: Changa;font-size: 20px;">My Blogs</a>
+  </span>
+  <ul class="nav navbar-nav ml-auto" role="tablist">
+    <li class="nav-item d-md-down-none">
+    
+    </li>
+    <li class="nav-item">
+      
+      <div class="dropdown-menu dropdown-menu-right"><a style="cursor: pointer;" class="nav-link"
+          data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        </a><a class="dropdown-item" href="/Cloud/Apps/?Users&amp;Users">
+          <i class="icon-layers text-dark"></i> Users </a>
+
+      </div>
+
+    </li>
+
+    <li class="nav-item dropdown d-md-down-none">
+      <a style="cursor: pointer;" onclick="asideToggle()" class="nav-link navbar-toggler aside-menu-toggler"
+        data-toggle="aside-menu-lg-show" role="button" aria-haspopup="true" aria-expanded="false">
+        
+      </a>
+    </li>
+     
+
+    <li class="nav-item dropdown" id="divMenu">
+      <a class="nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        <div style="float: left;padding-top: 10px" class="d-md-down-none">
+          {{UserName}} </div>
+        <div class="img-avatar" (click)="ShowDropDown()"
+          style="background: #f1f1f1;height: 40px;width: 40px;border-radius: 20px;background-image: url(https://www.bytepaper.com/Cloud/assets/Profile/defaultnew.png);background-size: cover;cursor: pointer;background-position: center;float: right;">
+        </div>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" id="divNav">
+        <a class="dropdown-item" href="?Profile&amp;myProfile&amp;5f8a948f3d0d0000ac005405&amp;01-11-2020&amp;30-11-2020">
+          <i class="fa fa-user"></i> My Profile</a>
+        <a class="dropdown-item" (click)="LogOut()">
+          <i class="fa fa-bell-o"></i> Logout</a>
+      </div>
+    </li>
+  </ul>
+  <button class="navbar-toggler aside-menu-toggler d-md-down-none" type="button" data-toggle="aside-menu-lg-show">
+    <span class="navbar-toggler-icon" (click)="toggleAside()" ></span>
+  </button>
+  <button class="navbar-toggler aside-menu-toggler d-lg-none d-md-down-none" type="button"
+    data-toggle="aside-menu-show">
+    <span class="navbar-toggler-icon" (click)="toggleAside()"></span>
+  </button>
+</header>

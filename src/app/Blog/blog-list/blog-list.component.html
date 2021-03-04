@@ -1,0 +1,152 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col-md-12">
+
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Blog List</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                            <div class="row">
+                                
+                                
+                                <div class="col-md-3">
+                                    <div class="card-tools">
+                                        <div class="input-group input-group-sm">
+                                          <input type="text" class="form-control" placeholder="Search ">
+                                          <div class="input-group-append">
+                                            <div class="btn btn-primary">
+                                              <i class="fas fa-search"></i>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div></div>
+                                      <div class="col-md-3"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table id="example1" class="table table-bordered table-striped dataTable"
+                                        role="grid" aria-describedby="example1_info">
+                                        <thead>
+                                            <tr role="row">
+                                                <th class="sorting_desc" tabindex="0" aria-controls="example1"
+                                                rowspan="1" colspan="1"
+                                                aria-label="Rendering engine: activate to sort column ascending"
+                                                aria-sort="descending" style="width: 203.4px;">Title</th>
+                                                <th class="sorting_desc" tabindex="0" aria-controls="example1"
+                                                    rowspan="1" colspan="1"
+                                                    aria-label="Rendering engine: activate to sort column ascending"
+                                                    aria-sort="descending" style="width: 500.4px;">Description</th>
+                                                    <th class="sorting_desc" tabindex="0" aria-controls="example1"
+                                                    rowspan="1" colspan="1"
+                                                    aria-label="Rendering engine: activate to sort column ascending"
+                                                    aria-sort="descending" style="width: 500.4px;">Created On</th>
+                                                <!-- <th>  <img src={{orm.img}} alt="delete" height=30px" width="30px"></th> -->
+                                                <th class="sorting" tabindex="0" aria-controls="example1"
+                                                    rowspan="1" colspan="1"
+                                                    aria-label="Engine version: activate to sort column ascending"
+                                                    style="width: 200.6px;">Action</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr role="row" class="odd" *ngFor="let blg of blogs">
+                                                <td class="sorting_1">{{blg.title}}</td>
+                                                <td>{{blg.description}}</td>
+                                                <td>{{blg.CreatedOn}}</td>
+                                               
+                                               
+                                                <td class="project-actions text-right">
+                                                    <button type="button" class="btn btn-info btn-sm"
+                                                    data-toggle="modal" data-target="#openexpiredModal" (click)="editBlog(blg.id)">
+                                                    <i class="fas fa-folder">
+                                                    </i>
+                                                    Edit
+                                                   
+                                                </button>
+                                                    <button type="button" class="btn btn-danger btn-sm" 
+                                                    data-toggle="modal" data-target="#deleteModal" (click)="deleteBlog(blg.id)">
+                                                    <i class="fas fa-trash">
+                                                    </i>
+                                                    Delete
+                                                </button>
+
+                                                   
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+    </div>
+</section>
+</div>
+
+
+<!-- Add Modal -->
+
+<div class="modal fade bd-example-modal-lg" id="openexpiredModal" tabindex="-1" role="dialog"
+    aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Return</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Modal -->
+
+<!-- Modal HTML -->
+<div id="deleteModal" class="modal fade">
+    <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="material-icons">&#xE5CD;</i>
+                </div>
+                <h4 class="modal-title">Are you sure?</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Do you really want to delete these records? This process cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
