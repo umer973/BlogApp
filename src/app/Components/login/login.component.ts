@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { LoaderService } from '../loader.service';
-import { NotificationServiceService } from '../notification-service.service';
-import { User } from '../Models/user';
+import { LoaderService } from '../../Services/loader.service';
+import { NotificationServiceService } from '../../Services/notification-service.service';
+import { User } from '../../Models/user';
 
 @Component({
   selector: 'app-login',

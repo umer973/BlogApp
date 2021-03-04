@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './Components/login/login.component';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
 
-import { LayoutComponent } from './layout/layout/layout.component';
+import { LayoutComponent } from './Components/layout/layout/layout.component';
 
-import { AuthGuardService } from './auth-guard.service';
+import { AuthGuardService } from './Services/auth-guard.service';
 
-import { AddBlogsComponent } from './Blog/add-blogs/add-blogs.component';
-import { BlogListComponent } from './Blog/blog-list/blog-list.component';
+import { AddBlogsComponent } from './Components/Blog/add-blogs/add-blogs.component';
+import { BlogListComponent } from './Components/Blog/blog-list/blog-list.component';
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
@@ -25,7 +25,7 @@ const routes: Routes = [
   
   {
     path: 'layout',
-    loadChildren: () => import('./layout/layout.module').then(mod => mod.LayoutModule)
+    loadChildren: () => import('./Components/layout/layout.module').then(mod => mod.LayoutModule)
   },
 ];
 @NgModule({
