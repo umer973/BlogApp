@@ -1,0 +1,33 @@
+<div class="col-md-12">
+  <div class="row">
+    <div class="col-md-4 col-12" style="margin-left: 520px;
+    margin-top: 100px;background: aliceblue">
+      <div class="card-body">
+        <h4>Sign in to your account</h4>
+        <br>
+        <br>
+
+        <form [formGroup]="loginForm">
+          <div class="input-group mb-3">
+            <input class="form-control" type="email" autofill="false" formControlName="userName" placeholder="Email ID"
+              autofocus="" style="display: block;">
+          </div>
+          <div class="input-group mb-4">
+            <input class="form-control" type="password" formControlName="password" placeholder="Password" autofocus="">
+          </div>
+
+          <div class="row">
+            <div class="col-6 text-right">
+              <br>
+            </div>
+            <div class="col-12">
+              <br>
+              <button class="btn btn-success px-4" (click)="login()">Log In</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

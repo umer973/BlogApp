@@ -1,0 +1,47 @@
+<body id="mainAppBody" style="overflow: hidden;"
+  class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show brand-minimized pace-done">
+  <div class="pace  pace-inactive">
+    <div class="pace-progress" data-progress-text="100%" data-progress="99"
+      style="transform: translate3d(100%, 0px, 0px);">
+      <div class="pace-progress-inner"></div>
+    </div>
+    <div class="pace-activity"></div>
+  </div>
+
+  <!-- Header -->
+ <app-header ></app-header>
+
+  <div class="app-body">
+    <!-- Side Bar -->
+    <app-sidebar></app-sidebar>
+    <main class="main">
+      <div class="col-12">
+        <div class="row" id="mainContentHolder">
+          <style type="text/css">
+            .scroll-box {
+              overflow-y: auto;
+            }
+
+            .scroll-box::-webkit-scrollbar {
+              width: .0em;
+            }
+          </style>
+
+        </div>
+        <router-outlet></router-outlet>
+      </div>
+    </main>
+  </div>
+    <!-- Footer -->
+    <app-footer></app-footer>
+ 
+  <script src="../assets/vendors/jquery/js/jquery.min.js?1.5"></script>
+  <script src="../assets/vendors/popper.js/js/popper.min.js?1.5"></script>
+  <script src="../assets/vendors/bootstrap4/js/bootstrap.min.js?1.5"></script>
+  <script src="../assets/vendors/pace-progress/js/pace.min.js?1.5"></script>
+  <script src="../assets/vendors/perfect-scrollbar/js/perfect-scrollbar.min.js?1.5"></script>
+  <script src="../assets/vendors/@coreui/coreui/js/coreui.min.js?1.5"></script>
+  <script type="text/javascript" src="../assets/js/toastify.js"></script>
+  <script src="../assets/js/tooltips.js"></script>
+
+</body>

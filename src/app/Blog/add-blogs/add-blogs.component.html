@@ -1,0 +1,56 @@
+<div class="col-12" id="contents" style="height: 92vh;">
+    <div class="row">
+        <div class="offset-md-2 offset-0 col-md-8 col-12" style="min-height: 85vh;margin-top: 2%;">
+            <div class="card">
+                <div class="card-header">
+                    <b>Add Blog</b>
+                </div>
+              
+                <div class="card-body">
+                    <form [formGroup]="userFormGroup">
+                        <input type="hidden" value="">
+                        <div class="modal-body">
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label>Tite*</label>
+                                                    <input class="form-control" id="Name" name="Name"
+                                                        formControlName="title" type="text">
+                                                    <span class="text-danger"
+                                                        *ngIf="(f.title.touched  || submitted) && f.title.errors?.required">
+                                                         required
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label>Description*</label>
+                                                    <input class="form-control" formControlName="description"
+                                                        type="text" >
+                                                        <span class="text-danger"
+                                                        *ngIf="(f.description.touched  || submitted) && f.description.errors?.required">
+                                                         required
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-dark" id="buttonSave" (click)="onSubmit($event)"
+                                type="submit">Save</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
