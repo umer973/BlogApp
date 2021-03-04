@@ -2,10 +2,10 @@ import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { DialogService } from 'src/app/dialog/dialog.service';
-import { LoaderService } from 'src/app/loader.service';
+import { DialogService } from 'src/app/Components/dialog/dialog.service';
+import { LoaderService } from 'src/app/Services/loader.service';
 
-import { NotificationServiceService } from 'src/app/notification-service.service';
+import { NotificationServiceService } from 'src/app/Services/notification-service.service';
 import { BlogService } from 'src/app/Services/blog.service';
 import { v4 as uuid } from 'uuid';
 
